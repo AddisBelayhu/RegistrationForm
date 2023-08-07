@@ -14,7 +14,7 @@ body {
 
 .container {
     width: 500px;
-    height: 590px;
+    height: 500px;
     margin: auto;
     border-radius: 5px;  
     border:1px solid #ced4da;
@@ -155,4 +155,54 @@ padding-left: 20px;
     width:var(--BarEndWidth);
     background-color: black;
     animation: ZerotoHeroWidth 0.5s ease;
+}
+
+.PassedStep::after{
+  
+    width:100% !important;
+    transition: 1s;
+}
+
+.GoBack{
+    width:fit-content;
+    padding:0px 10px;
+    font-size: 1.5em;
+    font-weight: 900;
+    position: absolute;
+    border-radius: 5px;
+    background-color: transparent;
+    border:none;
+    color:white;
+    cursor:pointer;
+    left:-50px;
+}
+
+.GoBack:hover{
+    background-color: #40916c;
+}
+
+@keyframes ZerotoHeroWidth{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:100%
+    }
+}
+
+@keyframes GoBackBtnVisible {
+    0%{
+        left:-50px;
+    }
+    100%{
+        left:10px;
+    }
+}
+@keyframes GoBackBtnInvisible {
+    0%{
+        left:10px;
+    }
+    100%{
+        left:-50px;
+    }
 }
